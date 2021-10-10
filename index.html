@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <!--Head-->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Circadia St.Clair</title>
+        <link rel="stylesheet" href="https://use.typekit.net/bok5rlj.css">
+        <link rel="stylesheet" type="text/css" href="css/portfolio.css">
+    </head>
+
+    <!--Body-->
+    <body class="Background">
+        
+        <!--Navbar-->
+        <div class="Navbar">
+            <a class="active" href="#Home">Home</a>
+            <a href="#About">About</a>
+            <a href="#Projects">Projects</a>
+            <!-- Onclick and ondblclick functions added to open and close the contact form -->
+            <a onclick="openForm()" ondblclick="closeForm()">Contact</a>
+        </div>
+
+        <!--Background video-->
+        <div id="Home">
+            <video autoplay muted loop id="ocean_video">
+            <source src="./Img/slowjellies .mp4" type="video/mp4">
+                <!--Display message if video fails to run-->
+                Your browser does not support HTML5 video.
+            </video>
+        </div>
+
+        <!--Video text-->
+        <div class="Video_Text">
+            <h1 class="white-text">Circadia St.Clair<br></h1>
+            <h3> UI/UX design</h3>
+        </div>
+
+        <div id="Slideshow">
+            <div id="Slideshow_Background"> 
+                <div id="Slideshow_Container">
+                    <!-- Slide 1 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="Img/profilesquare.png" alt="Myself">
+                        <div class="text"> </div>
+                    </div>
+                    <!-- Slide 2 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="Img/bulbs.png" alt="lightbulbs"> 
+                        <div class="text">'Lightbulbs'</div>
+                    </div>
+                    <!-- Slide 3 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="Img/sandy.png" alt="sandy">
+                        <div class="text">'Sandy'</div>
+                    </div>
+                    <!-- Slide 4 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="Img/oriah.png" alt="oriah">
+                        <div class="text">'Oriah'</div>
+                    </div>
+                    <!-- Slide 5 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="Img/nautilus.png" alt="nautilus"> 
+                        <div class="text">'Nautilus No.3'</div>
+                    </div>
+                    <!-- Slide 6 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="Img/tulippath.jpg" alt="tulips"> 
+                        <div class="text">'Stormy path, tulips' </div> 
+                    </div>
+                    <!-- Slide 7-->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="Img/beets.jpg" alt="beets"> 
+                        <div class="text">'Sugar beets' </div> 
+                    </div>
+                    <!-- Slide 8-->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="Img/Begonia1.png" alt="begonia"> 
+                        <div class="text">'Begonia' </div> 
+                    </div>
+                    <!-- Slide 9-->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="Img/zoe.png" alt="zoe"> 
+                        <div class="text">'Zoe' </div> 
+                    </div>
+
+                    <!-- Previous and next buttons -->
+                    <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+            
+                <!-- Slideshow dots (these are another way for users to navigate through the slideshow) -->
+                <div style="text-align: center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span> 
+                    <span class="dot" onclick="currentSlide(4)"></span> 
+                    <span class="dot" onclick="currentSlide(5)"></span> 
+                    <span class="dot" onclick="currentSlide(6)"></span> 
+                </div>
+            </div>
+        </div>
+
+        <!--About section-->
+            <div class="Row" id="About">
+                <h2>About me</h2>
+                <p>
+                    I am an artist and UX designer with an eye towards soothing aesthetics and delightful experiences. 
+                    <br>I spent 15 years in the healing arts industry and my goal hasn't changed: to ease the stress of daily life so people have more energy, creativity, and empathy. I aim to contribute to the well-being of others through stress-free design and positive customer experiences.
+                    <br>I am a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>’s UI/UX Design program, and trained as a full-stack developer in HTML, CSS, JavaScript, SQL, Adobe XD, and Adobe Photoshop.
+                    
+                </p>
+            </div>
+            <div class="Row" id="Projects">
+                    <h2> Projects and Case Studies</h2>
+                <div class="Projects_Container">
+                    <div class="Column_1">
+                        <h4>Theatre Vertigo</h4>
+                        <a href="page3.html">
+                            <img src="Img/vertigocasestudy.png" >
+                        </a>
+                    </div>
+                    <div class="Column_2">
+                        <h4>Canyon Hikers</h4>
+                        <a href="page2.html">
+                            <img src="Img/style guide.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        <!--Contact section-->
+        <div class="Row" id="Contact">
+           <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+           <div class="form-popup" id="myForm">
+            <form action="mailto:transparentcircadia@gmail.com" method="POST" class="form-container"> <!-- Here we are using a free online service from https://formspree.io/ to send our contact form to an email address of our choosing - note: it will not run unless live on the internet, you have to push it to your online website first -->
+                <h2>Contact</h2>
+                <label for="name"><b>Name</b></label>
+                  <input type="text" placeholder="your name" name="name" required>
+                <label for="phone"><b>Phone</b></label>
+                  <input type="text" placeholder="your phone number" name="phone">
+                <label for="email"><b>Email</b></label>		
+                  <input type="text" placeholder="your email address" name="email" required>
+                <label for="message"><b>Message</b></label>
+                  <input type="text" placeholder="your message" name="message">
+     
+                  <button type="submit" class="btn">SUBMIT</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+                </form>
+           </div>
+        </div>
+
+        <!--Footer section-->
+        <footer>
+            <p class="center">Circadia St.Clair<br>Orcas Island, WA<br>transparentcircadia@gmail.com<br>
+                
+            <a href="https://github.com/CircadiaStC" target="_blank">Circadia on Github</a><br>
+                
+            <a href="https://www.linkedin.com/in/autumn-st-clair-a8945b210/" target="_blank">Circadia on LinkedIn</a><br>
+                </p>
+            
+        </footer>
+        <script src="js/portfolio.js"></script>
+    </body>
+</html>
